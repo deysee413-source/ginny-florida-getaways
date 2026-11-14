@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ginny Adkins | Florida Getaways — South Daytona & Deltona Vacation Rentals</title>
+<meta name="description" content="Florida vacation rentals hosted by Airbnb Superhost Ginny Adkins: Sunseeker Getaway, a South Daytona home with a private hot tub near Daytona Beach, and Serenity Sprout Retreat, a Deltona furnished rental for extended stays.">
+<meta name="keywords" content="South Daytona vacation rental, Daytona Beach vacation home, Florida vacation rentals, Deltona furnished rental, Deltona extended stay, Florida pet-friendly vacation rental, South Daytona home with hot tub, Furnished homes in Central Florida">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ginny Adkins | Florida Getaways">
+<meta property="og:title" content="Ginny Adkins | Florida Getaways">
+<meta property="og:description" content="Beautiful Spaces. Relaxing Stays. Unforgettable Florida Getaways. Two thoughtfully designed homes in South Daytona and Deltona, hosted by an Airbnb Superhost.">
+<meta property="og:image" content="https://deysee413-source.github.io/ginny-florida-getaways/img/ss-32.jpg">
+<meta property="og:url" content="https://deysee413-source.github.io/ginny-florida-getaways/">
+<link rel="canonical" href="https://deysee413-source.github.io/ginny-florida-getaways/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#243746">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style type="text/tailwindcss">
+  @theme {
+    --color-ivory: #FAF8F4;
+    --color-sage: #9CAF9B;
+    --color-sage-dark: #6F8A6E;
+    --color-navy: #243746;
+    --color-navy-light: #34506A;
+    --color-sand: #E8DCCB;
+    --color-gold: #C4A77D;
+    --color-gold-dark: #A88B5F;
+    --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+    --font-sans: "Inter", "Lato", system-ui, -apple-system, sans-serif;
+  }
+</style>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: #FAF8F4; color: #243746; font-family: "Inter", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+  .ph-pattern { background-image: radial-gradient(rgba(255,255,255,.18) 1px, transparent 1px); background-size: 18px 18px; }
+  .lift { transition: transform .35s ease, box-shadow .35s ease; }
+  .lift:hover { transform: translateY(-4px); box-shadow: 0 24px 48px -20px rgba(36,55,70,.35); }
+  .zoom img, .zoom .ph { transition: transform .9s ease; }
+  .zoom:hover img, .zoom:hover .ph { transform: scale(1.04); }
+  .eyebrow { letter-spacing: .22em; }
+  :focus-visible { outline: 2px solid #C4A77D; outline-offset: 3px; border-radius: 6px; }
+  .acc-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .35s ease; }
+  .acc-body.open { grid-template-rows: 1fr; }
+  .acc-body > div { overflow: hidden; }
+  #root:empty::before { content: "Loading Ginny Adkins | Florida Getaways…"; display:block; padding: 4rem; text-align:center; font-family: Georgia, serif; }
+</style>
+</head>
+<body>
+<noscript><p style="padding:2rem;text-align:center">Please enable JavaScript to view this site. Book directly on Airbnb: <a href="https://www.airbnb.com/h/sunseekergetaway">Sunseeker Getaway</a> · <a href="https://www.airbnb.com/h/serenity-sprout">Serenity Sprout Retreat</a></p></noscript>
+<div id="root"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/htm@3.1.1/dist/htm.umd.js"></script>
+<script>
+/* =====================================================================
+   SITE SETTINGS — edit these values to finish the site.
+   Leave a value as "" and the related link/button stays hidden or
+   shows a clearly marked placeholder. Nothing here is invented.
+   ===================================================================== */
+const CONFIG = {
+  siteName: "Ginny Adkins | Florida Getaways",
+  tagline: "Beautiful Spaces. Relaxing Stays. Unforgettable Florida Getaways.",
+  airbnb: {
+    sunseeker: "https://www.airbnb.com/h/sunseekergetaway",
+    serenity: "https://www.airbnb.com/h/serenity-sprout",
+    hostProfile: ""            // optional: Ginny's Airbnb host profile URL
+  },
+  realEstateUrl: "",           // optional: Ginny's real estate website
+  email: "ginny@ginnybuyshouses.com",
+  phone: "407-288-6497",
+  social: { youtube: "https://www.youtube.com/@ginnyadkins734", instagram: "", facebook: "" },
+  // Inquiry form delivery. Paste a form-service endpoint that accepts JSON POSTs
+  // (e.g. Formspree, Basin, Getform) once one is set up. While this is empty the
+  // form will NOT pretend to send — it tells the visitor and offers Airbnb instead.
+  formEndpoint: "",
+  // Show "placeholder" labels on photo slots and the reviews area.
+  // Set to false at launch once real photos and reviews are added.
+  showPlaceholders: true
+};
+
+/* Owner-provided photos: put an image URL (or relative path like "img/sunseeker-hot-tub.jpg")
+   against each key. Empty keys show a labeled placeholder. */
+const PHOTOS = {
+  "hero": "img/ss-32.jpg", "welcome-1": "img/ss-02.jpg", "welcome-2": "img/sp-33.jpg", "host": "img/ginny.jpg",
+  "sunseeker-exterior": "img/ss-50.jpg", "sunseeker-living": "img/ss-01.jpg", "sunseeker-kitchen": "img/ss-06.jpg", "sunseeker-bed-1": "img/ss-19.jpg",
+  "sunseeker-bed-2": "img/ss-14.jpg", "sunseeker-bed-3": "img/ss-15.jpg", "sunseeker-bath": "img/ss-25.jpg", "sunseeker-hot-tub": "img/ss-35.jpg",
+  "sunseeker-fire-pit": "img/ss-33.jpg", "sunseeker-tiki-bar": "img/ss-38.jpg", "sunseeker-game-garage": "img/ss-47.jpg", "sunseeker-patio": "img/ss-42.jpg",
+  "serenity-exterior": "img/sp-37.jpg", "serenity-living": "img/sp-02.jpg", "serenity-kitchen": "img/sp-06.jpg", "serenity-bed-1": "img/sp-18.jpg",
+  "serenity-bed-2": "", "serenity-workspace": "img/sp-17.jpg", "serenity-bath": "", "serenity-laundry": "img/sp-35.jpg",
+  "serenity-backyard": "img/sp-31.jpg", "serenity-patio": "img/sp-32.jpg", "serenity-grill": "img/sp-30.jpg"
+};
+/* Listing photos are stored as img/ss-NN.jpg (Sunseeker) and img/sp-NN.jpg (Serenity). */
+function photoSrc(k) { return PHOTOS[k] || (/^s[sp]-\d+$/.test(k) ? `img/${k}.jpg` : ""); }
+
+/* Genuine guest reviews only, copied from Airbnb with permission.
+   Example shape (do not publish made-up reviews):
+   { name: "First name", rating: 5, text: "Review excerpt…", property: "sunseeker", date: "Month YYYY" } */
+const REVIEWS = [];
+
+/* ===================================================================== */
+
+const { useState, useEffect, useRef, useCallback } = React;
+const html = htm.bind(React.createElement);
+
+/* ---------- Icons (inline SVG, lucide-style) ---------- */
+const ICONS = {
+  wifi: "M5 12.55a11 11 0 0 1 14.08 0 M1.42 9a16 16 0 0 1 21.16 0 M8.53 16.11a6 6 0 0 1 6.95 0 M12 20h.01",
+  tv: "M7 2l5 5 5-5 M4 7h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z",
+  coffee: "M17 8h1a4 4 0 1 1 0 8h-1 M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z M6 2v2 M10 2v2 M14 2v2",
+  laptop: "M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16",
+  car: "M19 17h2v-4l-3-5H6l-3 5v4h2 M3 13h18 M7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4z M17 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4z",
+  flame: "M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z",
+  waves: "M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1",
+  glass: "M8 22h8 M12 11v11 M19 3l-7 8-7-8Z",
+  fence: "M4 3 2 5v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z M6 8h4 M6 18h4 M12 3l-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z M14 8h4 M14 18h4 M20 3l-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z",
+  game: "M6 12h4 M8 10v4 M15 13h.01 M18 11h.01 M17.32 5H6.68a4 4 0 0 0-3.978 3.59l-.9 7.2A3 3 0 0 0 4.8 19c.9 0 1.7-.4 2.2-1.1L9 15h6l2 2.9c.5.7 1.3 1.1 2.2 1.1a3 3 0 0 0 3-3.21l-.9-7.2A4 4 0 0 0 17.32 5z",
+  utensils: "M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2 M7 2v20 M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7",
+  washer: "M3 6h18 M7 4h.01 M11 4h.01 M5 2h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z M12 18a4 4 0 1 0 0-8 4 4 0 0 0 0 8z",
+  paw: "M11 5a2 2 0 1 0-4 0 2 2 0 0 0 4 0 M17 5a2 2 0 1 0-4 0 2 2 0 0 0 4 0 M21 9a2 2 0 1 0-4 0 2 2 0 0 0 4 0 M7 9a2 2 0 1 0-4 0 2 2 0 0 0 4 0 M8.35 14.6c.9-1.9 2.2-3.1 3.65-3.1s2.75 1.2 3.65 3.1c.9 1.9 1.9 2.9.35 4.4-1.3 1.2-2.6.5-4 .5s-2.7.7-4-.5c-1.55-1.5-.55-2.5.35-4.4z",
+  home: "M3 10l9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z M9 22V12h6v10",
+  star: "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z",
+  pin: "M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z",
+  heart: "M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z",
+  sun: "M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M12 2v2 M12 20v2 M4.93 4.93l1.41 1.41 M17.66 17.66l1.41 1.41 M2 12h2 M20 12h2 M6.34 17.66l-1.41 1.41 M19.07 4.93l-1.41 1.41",
+  leaf: "M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12",
+  bed: "M2 4v16 M2 8h18a2 2 0 0 1 2 2v10 M2 17h20 M6 8v9",
+  bath: "M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.68 3 4 3.68 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5 M10 5 8 7 M2 12h20 M7 19v2 M17 19v2",
+  users: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2 M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M22 21v-2a4 4 0 0 0-3-3.87 M16 3.13a4 4 0 0 1 0 7.75",
+  calendar: "M8 2v4 M16 2v4 M3 10h18 M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z",
+  mail: "M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z M22 6l-10 7L2 6",
+  phone: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z",
+  menu: "M4 6h16 M4 12h16 M4 18h16",
+  x: "M18 6 6 18 M6 6l12 12",
+  down: "m6 9 6 6 6-6",
+  left: "m15 18-6-6 6-6",
+  right: "m9 18 6-6-6-6",
+  arrow: "M5 12h14 M12 5l7 7-7 7",
+  external: "M15 3h6v6 M10 14 21 3 M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6",
+  check: "M20 6 9 17l-5-5",
+  camera: "M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z M12 17a3 3 0 1 0 0-6 3 3 0 0 0 0 6z",
+  cross: "M12 7v10 M7 12h10 M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z",
+  road: "M4 19 8 5 M16 5l4 14 M12 6v2 M12 11v2 M12 16v2",
+  trees: "M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z M7 16v6 M13 19v3 M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5",
+  bag: "M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z M3 6h18 M16 10a4 4 0 0 1-8 0",
+  flag: "M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z M4 22v-7",
+  shield: "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z M9 12l2 2 4-4",
+  award: "M15.477 12.89 17 22l-5-3-5 3 1.523-9.11 M12 14a6 6 0 1 0 0-12 6 6 0 0 0 0 12z",
+  key: "M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z M16.5 7.5h.01",
+  sofa: "M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3 M2 11v5a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H6v-2a2 2 0 0 0-4 0Z M4 18v2 M20 18v2",
+  family: "M12 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6z M5 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z M19 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z M2 15c0-2.2 1.3-4 3-4s3 1.8 3 4 M16 15c0-2.2 1.3-4 3-4s3 1.8 3 4",
+  instagram: "M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z M17.5 6.5h.01",
+  facebook: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z",
+  youtube: "M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17 M10 15l5-3-5-3z",
+  copy: "M8 8h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2z M4 16a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2",
+  info: "M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z M12 16v-4 M12 8h.01",
+  expand: "M15 3h6v6 M9 21H3v-6 M21 3l-7 7 M3 21l7-7"
+};
+function Icon({ name, className = "w-5 h-5", filled = false, title }) {
+  const d = ICONS[name] || "";
+  return html`<svg viewBox="0 0 24 24" className=${className} fill=${filled ? "currentColor" : "none"} stroke="currentColor"
+    strokeWidth=${filled ? 0 : 1.6} strokeLinecap="round" strokeLinejoin="round" aria-hidden=${title ? undefined : "true"} role=${title ? "img" : undefined}>
+    ${title ? html`<title>${title}</title>` : null}
+    ${d.split(/ (?=M)/).map((p, i) => html`<path key=${i} d=${p} />`)}
+  </svg>`;
+}
+
+/* ---------- Property data (from the owner's brief) ---------- */
+const PROPERTIES = {
+  "sunseeker-getaway": {
+    id: "sunseeker", slug: "sunseeker-getaway", name: "Sunseeker Getaway", navName: "Sunseeker Getaway",
+    location: "South Daytona, Florida", area: "South Daytona", tone: "coast",
+    url: CONFIG.airbnb.sunseeker,
+    headline: "Your Coastal Escape with a Private Hot Tub & Backyard Oasis",
+    cardBlurb: "A beautifully updated 3-bedroom South Daytona home about six minutes from Daytona Beach, with a private hot tub, tiki bar and game garage.",
+    overview: "Escape to this beautifully updated 3-bedroom, 2-bathroom South Daytona retreat, conveniently located approximately six minutes from Daytona Beach. Designed for families, friends, beach lovers, and racing enthusiasts, this welcoming home combines modern comforts with fun-filled amenities.",
+    cta: "Explore Sunseeker Getaway",
+    mapQuery: "South Daytona, FL",
+    stats: [["users", "Up to 7 guests"], ["home", "3 bedrooms"], ["bed", "4 beds"], ["bath", "2 bathrooms"]],
+    badges: ["Beach Getaway", "Private Hot Tub", "Family Friendly", "Pet Friendly with Approval"],
+    sleeping: {
+      intro: "Three bedrooms with four beds in total, comfortably accommodating up to seven guests.",
+      rooms: [["Primary bedroom · King", "sunseeker-bed-1"], ["Bedroom 2 · Queen", "sunseeker-bed-2"], ["Bedroom 3 · Full + Twin", "sunseeker-bed-3"]],
+      note: "Luxury mattresses and soft white linens throughout. Bedroom 3 also has a desk for remote work."
+    },
+    amenities: [
+      ["waves", "Private 6-person hot tub"], ["flame", "Outdoor fire pit"], ["glass", "Backyard tiki bar"],
+      ["fence", "Fully fenced backyard"], ["sun", "Screened patio"], ["game", "Game garage: ping-pong & foosball"],
+      ["utensils", "Fully equipped kitchen"], ["coffee", "Keurig & traditional coffee maker"], ["wifi", "High-speed Wi-Fi"],
+      ["tv", "Roku TVs"], ["washer", "Washer and dryer"], ["laptop", "Dedicated workspace"],
+      ["car", "Free parking, incl. trailer space"], ["family", "Family-friendly amenities"], ["paw", "Pet-friendly with prior approval"]
+    ],
+    outdoor: [
+      ["waves", "Private Hot Tub", "Unwind under the Florida sky in your own six-person hot tub.", "sunseeker-hot-tub"],
+      ["glass", "Backyard Tiki Bar", "Set up sunset drinks and snacks at the backyard tiki bar.", "sunseeker-tiki-bar"],
+      ["flame", "Outdoor Fire Pit", "Gather around the fire pit for evenings with family and friends.", "sunseeker-fire-pit"],
+      ["game", "Game Garage", "Ping-pong and foosball for friendly competition, rain or shine.", "sunseeker-game-garage"]
+    ],
+    nearby: [
+      ["sun", "Daytona Beach", "About six minutes away"], ["flag", "Daytona International Speedway", "For racing fans and event weekends"],
+      ["trees", "Reed Canal Park", "Green space nearby"], ["bag", "Local restaurants & shopping", "Everyday conveniences close by"],
+      ["star", "Daytona Beach events & attractions", "Seasonal events and things to do"]
+    ],
+    rules: [
+      "Maximum occupancy is 7 guests.",
+      "Pets are welcome with prior approval; applicable pet fees apply.",
+      "Free parking on site, including room for a trailer.",
+      "Each guest using the hot tub must sign a liability waiver.",
+      "Check-in and check-out times, quiet hours and the complete house rules are listed on Airbnb and confirmed before you book."
+    ],
+    gallery: [
+      ["ss-37", "Fire pit and backyard at dusk"], ["ss-02", "Bright, coastal living room"], ["ss-06", "Kitchen with island seating"],
+      ["ss-32", "Private hot tub under the string lights"], ["ss-19", "Primary bedroom with king bed"], ["ss-35", "Six-person private hot tub"],
+      ["ss-33", "Fire pit seating"], ["ss-38", "Backyard tiki bar"], ["ss-41", "String-lit backyard with cornhole"],
+      ["ss-36", "Fully fenced backyard"], ["ss-42", "Screened patio lounge"], ["ss-43", "Screened patio seating"],
+      ["ss-45", "Front porch"], ["ss-01", "Living room"], ["ss-03", "Living room with Roku TV"],
+      ["ss-05", "Pet-friendly home (with approval)"], ["ss-07", "Kitchen and coffee station"], ["ss-09", "Kitchen and dining area"],
+      ["ss-11", "Dining table for the whole group"], ["ss-14", "Bedroom 2 with queen bed"], ["ss-13", "Bedroom 2"],
+      ["ss-15", "Bedroom 3 with full and twin beds"], ["ss-17", "Dedicated workspace desk"], ["ss-21", "Primary bedroom"],
+      ["ss-25", "Primary bathroom with walk-in shower"], ["ss-27", "Walk-in shower"], ["ss-28", "Second bathroom"],
+      ["ss-46", "Washer and dryer"], ["ss-47", "Game garage with ping-pong"], ["ss-48", "Ping-pong table"],
+      ["ss-50", "Front of the home and driveway"], ["ss-51", "Front of the home"]
+    ],
+    seoTitle: "Sunseeker Getaway | South Daytona Vacation Rental with Hot Tub",
+    seoDesc: "South Daytona home with hot tub, about six minutes from Daytona Beach. 3 bedrooms, sleeps 7, tiki bar, fire pit, game garage, pet-friendly with approval. Book on Airbnb."
+  },
+  "serenity-sprout": {
+    id: "serenity", slug: "serenity-sprout", name: "Serenity Sprout Retreat", navName: "Serenity Sprout",
+    location: "Deltona, Florida", area: "Deltona", tone: "garden",
+    url: CONFIG.airbnb.serenity,
+    headline: "Relax, Recharge & Feel at Home in Deltona",
+    cardBlurb: "A peaceful, fully furnished 2-bedroom Deltona home made for extended stays and remote work, with a private fenced backyard.",
+    overview: "Welcome to Serenity Sprout Retreat, a peaceful, fully furnished 2-bedroom, 1-bathroom home designed for comfortable extended stays, remote workers, traveling professionals, and guests seeking a quiet Florida retreat.",
+    overview2: "With a private fenced backyard, covered patio, dedicated workspace, and convenient access to nearby parks, hospitals, and major highways, Serenity Sprout offers a welcoming space to unwind and settle in.",
+    cta: "Explore Serenity Sprout",
+    mapQuery: "Deltona, FL",
+    stats: [["users", "2 guests (current listing)"], ["home", "2 bedrooms"], ["bed", "2 queen beds"], ["bath", "1 bathroom"]],
+    badges: ["Extended Stays", "Remote Work Friendly", "Private Backyard", "Pet Friendly"],
+    sleeping: {
+      intro: "Two restful bedrooms, each with a queen bed.",
+      rooms: [["Bedroom 1 · Queen bed", "serenity-bed-1"], ["Bedroom 2 · Queen bed", "serenity-bed-2"]],
+      note: "The current listing accommodates 2 guests."
+    },
+    amenities: [
+      ["utensils", "Fully equipped kitchen"], ["wifi", "Wi-Fi"], ["laptop", "Dedicated workspace"], ["washer", "Dedicated laundry room"],
+      ["fence", "Fully fenced backyard"], ["sun", "Covered patio"], ["flame", "Gas grill"], ["car", "Free on-site parking"],
+      ["paw", "Pet-friendly (fees apply)"], ["calendar", "Month-to-month stays"]
+    ],
+    outdoor: [
+      ["fence", "Private Fenced Backyard", "A private, fully fenced yard, a good fit for guests traveling with pets.", "serenity-backyard"],
+      ["sun", "Covered Patio", "A shaded spot for morning coffee or a quiet evening outdoors.", "serenity-patio"],
+      ["flame", "Gas Grill", "Cook dinner outside whenever the mood strikes.", "serenity-grill"]
+    ],
+    workspace: [
+      ["laptop", "Dedicated workspace", "A set-aside space for laptop days and video calls."],
+      ["wifi", "Wi-Fi throughout", "Stay connected for work, streaming and staying in touch."],
+      ["coffee", "Quiet setting", "A peaceful home designed for focus during the day and rest at night."]
+    ],
+    extended: [
+      ["calendar", "Suitable for month-to-month stays", "Settle in for weeks or months, not just nights."],
+      ["washer", "Dedicated laundry room", "Keep up with everyday life without a laundromat run."],
+      ["utensils", "Fully equipped kitchen", "Cook your own meals, just as you would at home."],
+      ["cross", "Close to nearby hospitals", "Convenient for traveling medical professionals."],
+      ["road", "Easy highway access", "Simple commutes and day trips around Central Florida."],
+      ["paw", "Pets welcome", "Bring your companion along (applicable fees)."]
+    ],
+    nearby: [
+      ["trees", "Dupont Lakes Park", "Nearby park"], ["trees", "Harris M. Saxon Park", "Nearby park"], ["waves", "Angela Lake", "Lakeside scenery"],
+      ["cross", "Nearby hospitals", "Convenient for medical professionals"], ["bag", "Local dining & shopping", "Everyday conveniences"],
+      ["road", "Convenient highway access", "Easy to get around Central Florida"]
+    ],
+    rules: [
+      "The current listing accommodates 2 guests.",
+      "Pets are welcome; applicable pet fees apply.",
+      "Suitable for month-to-month accommodations; terms are set on Airbnb.",
+      "Check-in and check-out times and the complete house rules are listed on Airbnb and confirmed before you book."
+    ],
+    gallery: [
+      ["sp-37", "Front of Serenity Sprout Retreat"], ["sp-02", "Living and dining area"], ["sp-06", "Fully equipped kitchen"],
+      ["sp-33", "Private covered patio"], ["sp-18", "Bedroom with queen bed"], ["sp-17", "Dedicated workspace"],
+      ["sp-07", "Kitchen"], ["sp-08", "Kitchen and entry"], ["sp-10", "Stove, range hood and sink"],
+      ["sp-11", "Dishes and glassware"], ["sp-12", "Cookware"], ["sp-15", "Dining area"],
+      ["sp-43", "Coffee station"], ["sp-32", "Covered patio seating"], ["sp-34", "Patio with gas grill"],
+      ["sp-30", "Gas grill"], ["sp-28", "Backyard"], ["sp-31", "Fully fenced backyard"],
+      ["sp-35", "Laundry area"], ["sp-45", "Patio entry"], ["sp-38", "Exterior"],
+      ["sp-39", "Covered parking and patio"], ["sp-42", "Entryway"], ["sp-05", "Pets welcome"]
+    ],
+    seoTitle: "Serenity Sprout Retreat | Deltona Furnished Rental for Extended Stays",
+    seoDesc: "Deltona furnished rental for extended stays and remote work: 2 bedrooms, 2 queen beds, dedicated workspace, laundry room, fenced backyard, pet-friendly. Book on Airbnb."
+  }
+};
+const PROPS = [PROPERTIES["sunseeker-getaway"], PROPERTIES["serenity-sprout"]];
+
+/* ---------- Helpers ---------- */
+const TONES = {
+  coast: "from-[#34506A] via-[#6F8FA3] to-[#E8DCCB]",
+  garden: "from-[#6F8A6E] via-[#9CAF9B] to-[#E8DCCB]",
+  warm: "from-[#A88B5F] via-[#C4A77D] to-[#E8DCCB]",
+  navy: "from-[#1B2A36] via-[#243746] to-[#6F8A6E]"
+};
+function Photo({ k, alt, tone = "warm", className = "", rounded = "rounded-2xl", label, eager = false, pos = "" }) {
+  const src = photoSrc(k);
+  if (src) {
+    return html`<div className=${`overflow-hidden ${rounded} ${className}`}>
+      <img src=${src} alt=${alt} loading=${eager ? "eager" : "lazy"} decoding="async" className=${`w-full h-full object-cover ${pos}`} />
+    </div>`;
+  }
+  return html`<div className=${`overflow-hidden ${rounded} ${className}`} role="img" aria-label=${`${alt} (photo coming soon)`}>
+    <div className=${`ph relative w-full h-full bg-gradient-to-br ${TONES[tone]}`}>
+      <div className="absolute inset-0 ph-pattern"></div>
+      ${CONFIG.showPlaceholders ? html`<div className="absolute inset-0 flex flex-col items-center justify-center text-white/90 text-center p-4">
+        <${Icon} name="camera" className="w-7 h-7 mb-2 opacity-80" />
+        <span className="text-[11px] uppercase eyebrow opacity-80">Photo placeholder</span>
+        <span className="font-serif text-lg mt-1">${label || alt}</span>
+      </div>` : null}
+    </div>
+  </div>`;
+}
+
+function ExtLink({ href, className, children, label }) {
+  return html`<a href=${href} target="_blank" rel="noopener noreferrer" className=${className} aria-label=${label}>${children}</a>`;
+}
+
+function BtnPrimary({ onClick, children, className = "" }) {
+  return html`<button type="button" onClick=${onClick} className=${`inline-flex items-center justify-center gap-2 rounded-full bg-gold hover:bg-gold-dark text-navy hover:text-white font-medium px-7 py-3.5 transition-colors shadow-sm ${className}`}>${children}</button>`;
+}
+function AirbnbBtn({ href, children = "View Availability on Airbnb", variant = "navy", className = "" }) {
+  const styles = {
+    navy: "bg-navy text-white hover:bg-navy-light",
+    gold: "bg-gold text-navy hover:bg-gold-dark hover:text-white",
+    outline: "border border-navy/25 text-navy hover:bg-navy hover:text-white",
+    light: "border border-white/60 text-white hover:bg-white hover:text-navy"
+  };
+  return html`<${ExtLink} href=${href} className=${`inline-flex items-center justify-center gap-2 rounded-full font-medium px-6 py-3 transition-colors ${styles[variant]} ${className}`}>
+    ${children}<${Icon} name="external" className="w-4 h-4" /><span className="sr-only">(opens Airbnb in a new tab)</span>
+  <//>`;
+}
+
+function Reveal({ children, className = "", delay = 0, as = "div" }) {
+  const ref = useRef(null);
+  useEffect(() => {
+    const el = ref.current; if (!el) return;
+    if (!("IntersectionObserver" in window)) { el.classList.add("in"); return; }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { el.classList.add("in"); io.disconnect(); } });
+    }, { threshold: 0.12 });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+  return React.createElement(as, { ref, className: `reveal ${className}`, style: { transitionDelay: `${delay}ms` } }, children);
+}
+
+function SectionHead({ eyebrow, title, sub, center = true, light = false }) {
+  return html`<${Reveal} className=${`${center ? "text-center mx-auto" : ""} max-w-2xl mb-12`}>
+    ${eyebrow ? html`<p className=${`text-xs uppercase eyebrow font-medium mb-3 ${light ? "text-gold" : "text-sage-dark"}`}>${eyebrow}</p>` : null}
+    <h2 className=${`font-serif text-4xl md:text-5xl leading-tight ${light ? "text-white" : "text-navy"}`}>${title}</h2>
+    ${sub ? html`<p className=${`mt-4 text-base md:text-lg leading-relaxed ${light ? "text-white/80" : "text-navy/70"}`}>${sub}</p>` : null}
+  <//>`;
+}
+
+function Stars({ n = 5 }) {
+  return html`<div className="flex gap-0.5 text-gold" aria-label=${`${n} out of 5 stars`}>
+    ${Array.from({ length: 5 }).map((_, i) => html`<${Icon} key=${i} name="star" filled=${true} className=${`w-4 h-4 ${i < n ? "" : "opacity-25"}`} />`)}
+  </div>`;
+}
+
+function setMeta(title, desc) {
+  document.title = title;
+  const m = document.querySelector('meta[name="description"]'); if (m) m.setAttribute("content", desc);
+  const ot = document.querySelector('meta[property="og:title"]'); if (ot) ot.setAttribute("content", title);
+  const od = document.querySelector('meta[property="og:description"]'); if (od) od.setAttribute("content", desc);
+}
+
+/* ---------- Routing (plain #name views) ---------- */
+function readRoute() {
+  const h = (location.hash || "").replace(/^#/, "");
+  return PROPERTIES[h] ? h : "home";
+}
+
+/* ---------- Lightbox ---------- */
+function Lightbox({ items, index, tone, onClose, onNav }) {
+  const closeRef = useRef(null);
+  useEffect(() => {
+    closeRef.current && closeRef.current.focus();
+    const onKey = (e) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowRight") onNav(1);
+      if (e.key === "ArrowLeft") onNav(-1);
+    };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => { document.removeEventListener("keydown", onKey); document.body.style.overflow = ""; };
+  }, [onClose, onNav]);
+  const [k, alt] = items[index];
+  return html`<div className="fixed inset-0 z-[100] bg-[#121c24]/95 flex flex-col" role="dialog" aria-modal="true" aria-label="Photo gallery">
+    <div className="flex items-center justify-between px-5 py-4 text-white/85">
+      <span className="text-sm">${index + 1} / ${items.length} · ${alt}</span>
+      <button ref=${closeRef} onClick=${onClose} className="p-2 rounded-full hover:bg-white/10" aria-label="Close gallery"><${Icon} name="x" className="w-6 h-6" /></button>
+    </div>
+    <div className="flex-1 flex items-center justify-center px-4 md:px-20 pb-6 relative" onClick=${(e) => { if (e.target === e.currentTarget) onClose(); }}>
+      <button onClick=${() => onNav(-1)} className="absolute left-2 md:left-6 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white" aria-label="Previous photo"><${Icon} name="left" className="w-6 h-6" /></button>
+      <${Photo} k=${k} alt=${alt} tone=${tone} eager=${true} className="w-full max-w-5xl aspect-[3/2] max-h-[78vh]" />
+      <button onClick=${() => onNav(1)} className="absolute right-2 md:right-6 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white" aria-label="Next photo"><${Icon} name="right" className="w-6 h-6" /></button>
+    </div>
+    <div className="flex gap-2 overflow-x-auto px-5 pb-5 justify-start md:justify-center">
+      ${items.map(([kk, aa], i) => html`<button key=${kk} onClick=${() => onNav(i - index)} aria-label=${`Show ${aa}`}
+        className=${`shrink-0 w-20 h-14 rounded-lg overflow-hidden ring-2 ${i === index ? "ring-gold" : "ring-transparent opacity-60 hover:opacity-100"}`}>
+        <div className=${`w-full h-full bg-gradient-to-br ${TONES[tone]}`}>${photoSrc(kk) ? html`<img src=${photoSrc(kk)} alt="" className="w-full h-full object-cover" loading="lazy" />` : null}</div>
+      </button>`)}
+    </div>
+  </div>`;
+}
+
+function Gallery({ items, tone }) {
+  const [open, setOpen] = useState(-1);
+  const nav = useCallback((d) => setOpen(i => (i + d + items.length) % items.length), [items.length]);
+  const close = useCallback(() => setOpen(-1), []);
+  const main = items.slice(0, 5);
+  return html`<div>
+    <div className="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-3 h-[420px] md:h-[520px]">
+      ${main.map(([k, alt], i) => html`<button key=${k} onClick=${() => setOpen(i)}
+        className=${`zoom relative group text-left ${i === 0 ? "col-span-2 row-span-2" : i > 2 ? "hidden md:block" : ""}`} aria-label=${`Open photo: ${alt}`}>
+        <${Photo} k=${k} alt=${alt} tone=${tone} eager=${i === 0} className="w-full h-full" />
+        <span className="absolute inset-0 rounded-2xl bg-navy/0 group-hover:bg-navy/15 transition-colors"></span>
+      </button>`)}
+    </div>
+    <div className="mt-4 flex justify-end">
+      <button onClick=${() => setOpen(0)} className="inline-flex items-center gap-2 rounded-full border border-navy/20 bg-white px-5 py-2.5 text-sm font-medium hover:border-navy transition-colors">
+        <${Icon} name="expand" className="w-4 h-4" /> View all ${items.length} photos
+      </button>
+    </div>
+    ${open >= 0 ? html`<${Lightbox} items=${items} index=${open} tone=${tone} onClose=${close} onNav=${nav} />` : null}
+  </div>`;
+}
+
+/* ---------- Navigation ---------- */
+function Nav({ route, go }) {
+  const [scrolled, setScrolled] = useState(false);
+  const [menu, setMenu] = useState(false);
+  useEffect(() => {
+    const on = () => setScrolled(window.scrollY > 40);
+    on(); window.addEventListener("scroll", on, { passive: true });
+    return () => window.removeEventListener("scroll", on);
+  }, []);
+  useEffect(() => { setMenu(false); }, [route]);
+  const solid = scrolled || route !== "home" || menu;
+  const items = [
+    ["Home", () => go("home", "top")],
+    ["Our Properties", () => go("home", "properties")],
+    ["Sunseeker Getaway", () => go("sunseeker-getaway")],
+    ["Serenity Sprout", () => go("serenity-sprout")],
+    ["About Your Host", () => go("home", "about")],
+    ["Guest Reviews", () => go(route === "home" ? "home" : route, "reviews")],
+    ["Contact", () => go("home", "contact")]
+  ];
+  const isActive = (label) => (label === "Sunseeker Getaway" && route === "sunseeker-getaway") || (label === "Serenity Sprout" && route === "serenity-sprout");
+  return html`<header className=${`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${solid ? "bg-ivory/95 backdrop-blur shadow-[0_1px_0_rgba(36,55,70,.08)]" : "bg-transparent"}`}>
+    <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-white text-navy px-4 py-2 rounded" onClick=${(e) => { e.preventDefault(); document.getElementById("main")?.focus(); }}>Skip to content</a>
+    <nav className="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-6" aria-label="Main">
+      <button onClick=${() => go("home", "top")} className="text-left leading-none" aria-label="Ginny Adkins Florida Getaways, home">
+        <span className=${`block whitespace-nowrap font-serif text-2xl font-semibold ${solid ? "text-navy" : "text-white"}`}>Ginny Adkins</span>
+        <span className=${`block text-[10px] uppercase eyebrow mt-1 ${solid ? "text-sage-dark" : "text-white/80"}`}>Florida Getaways</span>
+      </button>
+      <ul className="hidden xl:flex items-center gap-6">
+        ${items.map(([label, fn]) => html`<li key=${label}><button onClick=${fn} aria-current=${isActive(label) ? "page" : undefined}
+          className=${`text-sm transition-colors relative py-1 ${solid ? "text-navy/80 hover:text-navy" : "text-white/85 hover:text-white"} ${isActive(label) ? "after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-px after:bg-gold" : ""}`}>${label}</button></li>`)}
+      </ul>
+      <div className="flex items-center gap-3">
+        <span className="hidden sm:block"><${BtnPrimary} onClick=${() => go("home", "book")} className="!px-5 !py-2.5 text-sm whitespace-nowrap">Book Your Stay<//></span>
+        <button onClick=${() => setMenu(m => !m)} className=${`xl:hidden p-2 rounded-full ${solid ? "text-navy hover:bg-navy/5" : "text-white hover:bg-white/10"}`}
+          aria-expanded=${menu} aria-controls="mobile-menu" aria-label=${menu ? "Close menu" : "Open menu"}>
+          <${Icon} name=${menu ? "x" : "menu"} className="w-6 h-6" />
+        </button>
+      </div>
+    </nav>
+    <div id="mobile-menu" className=${`xl:hidden overflow-hidden transition-[max-height] duration-300 bg-ivory ${menu ? "max-h-[520px] border-t border-navy/10" : "max-h-0"}`}>
+      <ul className="px-5 py-4 space-y-1">
+        ${items.map(([label, fn]) => html`<li key=${label}><button onClick=${fn} className="w-full text-left py-3 px-2 font-serif text-xl text-navy border-b border-navy/5">${label}</button></li>`)}
+        <li className="pt-4"><${BtnPrimary} onClick=${() => go("home", "book")} className="w-full">Book Your Stay<//></li>
+      </ul>
+    </div>
+  </header>`;
+}
+
+/* ---------- Home sections ---------- */
+function Hero({ go }) {
+  return html`<section id="top" className="relative min-h-[100svh] flex items-center overflow-hidden">
+    <div className="absolute inset-0">
+      ${photoSrc("hero")
+        ? html`<img src=${photoSrc("hero")} alt="Sunseeker Getaway backyard at night with the private hot tub, string lights and tiki bar in South Daytona, Florida" className="w-full h-full object-cover" />`
+        : html`<div className=${`w-full h-full bg-gradient-to-br ${TONES.navy}`}><div className="absolute inset-0 ph-pattern opacity-60"></div>
+            <svg className="absolute bottom-0 inset-x-0 w-full h-1/2 text-sand/10" viewBox="0 0 1440 400" preserveAspectRatio="none" aria-hidden="true">
+              <path fill="currentColor" d="M0 220c160-60 320-60 480 0s320 60 480 0 320-60 480 0v180H0z"/><path fill="currentColor" d="M0 290c160-50 320-50 480 0s320 50 480 0 320-50 480 0v110H0z"/></svg></div>`}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#121c24]/55 via-[#121c24]/35 to-[#121c24]/65"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#121c24]/70 via-[#121c24]/30 to-transparent"></div>
+    </div>
+    <div className="relative max-w-7xl mx-auto px-5 lg:px-8 pt-28 pb-20 w-full">
+      <div className="max-w-3xl">
+        <p className="text-xs uppercase eyebrow text-gold font-medium mb-6">South Daytona · Deltona · Florida</p>
+        <h1 className="font-serif text-white text-5xl sm:text-6xl lg:text-7xl leading-[1.05]">Your Perfect Florida Getaway Starts Here.</h1>
+        <p className="mt-6 text-lg md:text-xl text-white/85 max-w-2xl leading-relaxed">Discover thoughtfully designed vacation homes where comfort, relaxation, and memorable experiences come together.</p>
+        <div className="mt-10 flex flex-col sm:flex-row gap-4">
+          <${BtnPrimary} onClick=${() => go("home", "properties")}>Explore Our Properties <${Icon} name="arrow" className="w-4 h-4" /><//>
+          <button onClick=${() => go("home", "book")} className="inline-flex items-center justify-center rounded-full border border-white/60 text-white hover:bg-white hover:text-navy px-7 py-3.5 font-medium transition-colors">Book Your Stay</button>
+        </div>
+        <p className="mt-10 inline-flex items-center gap-2.5 text-sm text-white/85">
+          <span className="inline-flex w-8 h-8 rounded-full bg-white/15 items-center justify-center"><${Icon} name="award" className="w-4 h-4 text-gold" /></span>
+          Hosted with Care by Ginny Adkins | Airbnb Superhost
+        </p>
+      </div>
+    </div>
+    ${CONFIG.showPlaceholders && !photoSrc("hero") ? html`<span className="absolute bottom-4 right-5 text-[10px] uppercase eyebrow text-white/50">Hero photo placeholder</span>` : null}
+  </section>`;
+}
+
+function Welcome() {
+  return html`<section className="py-24 md:py-32">
+    <div className="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
+      <${Reveal}>
+        <p className="text-xs uppercase eyebrow text-sage-dark font-medium mb-3">Welcome</p>
+        <h2 className="font-serif text-4xl md:text-5xl leading-tight">A Home Away From Home, Thoughtfully Designed for You</h2>
+        <p className="mt-6 text-lg text-navy/75 leading-relaxed">Whether you're planning a beach getaway, visiting family, working remotely, or settling in for an extended stay, our Florida vacation homes offer the perfect balance of comfort, convenience, and relaxation. Every space is thoughtfully prepared to help you feel right at home.</p>
+        <div className="mt-8 grid grid-cols-2 gap-4 max-w-md">
+          ${[["sun", "Beach getaways"], ["family", "Family visits"], ["laptop", "Remote work"], ["calendar", "Extended stays"]].map(([i, t]) => html`
+            <div key=${t} className="flex items-center gap-3 text-navy/80"><span className="w-9 h-9 rounded-full bg-sand/70 flex items-center justify-center text-navy"><${Icon} name=${i} className="w-4 h-4" /></span><span className="text-sm">${t}</span></div>`)}
+        </div>
+      <//>
+      <${Reveal} delay=${150} className="relative h-[460px] md:h-[540px]">
+        <${Photo} k="welcome-1" alt="Inviting living space in one of Ginny's Florida vacation homes" label="Lifestyle photo · living space" tone="warm" className="absolute left-0 top-0 w-[72%] h-[78%] shadow-xl" />
+        <${Photo} k="welcome-2" alt="Relaxing outdoor space at a Florida vacation rental" label="Lifestyle photo · outdoor living" tone="garden" className="absolute right-0 bottom-0 w-[52%] h-[52%] shadow-xl ring-8 ring-ivory" />
+      <//>
+    </div>
+  </section>`;
+}
+
+function PropertyCard({ p, go, delay }) {
+  return html`<${Reveal} delay=${delay} as="article" className="lift bg-white rounded-3xl overflow-hidden shadow-[0_10px_40px_-20px_rgba(36,55,70,.25)] flex flex-col">
+    <button onClick=${() => go(p.slug)} className="zoom block relative" aria-label=${`${p.cta}`}>
+      <${Photo} k=${p.gallery[0][0]} alt=${`${p.name} in ${p.location}`} label=${`${p.name} · exterior`} tone=${p.tone} rounded="rounded-none" className="h-72 md:h-80 w-full" />
+      <span className="absolute top-4 left-4 inline-flex items-center gap-1.5 bg-white/95 text-navy text-xs font-medium rounded-full px-3 py-1.5"><${Icon} name="pin" className="w-3.5 h-3.5" />${p.location}</span>
+    </button>
+    <div className="p-7 md:p-9 flex flex-col flex-1">
+      <h3 className="font-serif text-3xl md:text-4xl">${p.name}</h3>
+      <p className="mt-2 text-gold-dark font-serif italic text-xl">${p.headline}</p>
+      <p className="mt-4 text-navy/70 leading-relaxed">${p.cardBlurb}</p>
+      <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-navy/80">
+        ${p.stats.map(([i, t]) => html`<li key=${t} className="flex items-center gap-1.5"><${Icon} name=${i} className="w-4 h-4 text-sage-dark" />${t}</li>`)}
+      </ul>
+      <ul className="mt-5 flex flex-wrap gap-2">
+        ${p.badges.map(b => html`<li key=${b} className="text-xs rounded-full bg-sand/60 px-3 py-1.5">${b}</li>`)}
+      </ul>
+      <div className="mt-auto pt-8 flex flex-col sm:flex-row gap-3">
+        <button onClick=${() => go(p.slug)} className="inline-flex items-center justify-center gap-2 rounded-full bg-navy text-white hover:bg-navy-light px-6 py-3 font-medium transition-colors">${p.cta}<${Icon} name="arrow" className="w-4 h-4" /></button>
+        <${AirbnbBtn} href=${p.url} variant="outline" />
+      </div>
+    </div>
+  <//>`;
+}
+
+function Properties({ go }) {
+  return html`<section id="properties" className="py-24 md:py-32 bg-sand/35 scroll-mt-20">
+    <div className="max-w-7xl mx-auto px-5 lg:px-8">
+      <${SectionHead} eyebrow="Our Properties" title="Two Homes, Two Ways to Enjoy Florida" sub="A lively South Daytona home near the beach, and a calm Deltona retreat made for longer stays." />
+      <div className="grid lg:grid-cols-2 gap-8">
+        ${PROPS.map((p, i) => html`<${PropertyCard} key=${p.id} p=${p} go=${go} delay=${i * 120} />`)}
+      </div>
+      <${Compare} />
+    </div>
+  </section>`;
+}
+
+function Compare() {
+  const rows = [
+    ["Location", "South Daytona", "Deltona"],
+    ["Guests", "Up to 7", "2 (current listing)"],
+    ["Bedrooms / beds", "3 bedrooms · king, queen, full + twin", "2 bedrooms · 2 queen beds"],
+    ["Bathrooms", "2", "1"],
+    ["Best for", "Beach trips, families, racing weekends", "Extended stays, remote work, traveling professionals"],
+    ["Outdoor space", "Hot tub, tiki bar, fire pit, screened patio", "Fenced backyard, covered patio, gas grill"],
+    ["Workspace & Wi-Fi", true, true],
+    ["Laundry", "Washer and dryer", "Dedicated laundry room"],
+    ["Free parking", "Yes, including trailer space", "Yes, on-site"],
+    ["Pets", "With prior approval & fees", "Yes, fees apply"]
+  ];
+  const cell = (v) => v === true ? html`<${Icon} name="check" className="w-5 h-5 text-sage-dark" title="Yes" />` : v;
+  return html`<${Reveal} className="mt-16 bg-white rounded-3xl overflow-hidden shadow-[0_10px_40px_-24px_rgba(36,55,70,.25)]">
+    <div className="px-7 pt-7 pb-3"><h3 className="font-serif text-2xl">Compare at a glance</h3></div>
+    <div className="overflow-x-auto">
+      <table className="w-full text-sm min-w-[560px]">
+        <thead><tr className="text-left border-b border-navy/10">
+          <th scope="col" className="px-7 py-3 font-medium text-navy/60 w-1/4"></th>
+          <th scope="col" className="px-7 py-3 font-serif text-lg">Sunseeker Getaway</th>
+          <th scope="col" className="px-7 py-3 font-serif text-lg">Serenity Sprout Retreat</th>
+        </tr></thead>
+        <tbody>${rows.map(([l, a, b]) => html`<tr key=${l} className="border-b border-navy/5 last:border-0 even:bg-ivory/60">
+          <th scope="row" className="px-7 py-3.5 text-left font-medium text-navy/70">${l}</th><td className="px-7 py-3.5">${cell(a)}</td><td className="px-7 py-3.5">${cell(b)}</td></tr>`)}</tbody>
+      </table>
+    </div>
+  <//>`;
+}
+
+function WhyStay() {
+  const items = [
+    ["home", "Thoughtfully Designed Homes", "Beautifully furnished spaces created with comfort, convenience, and relaxation in mind."],
+    ["heart", "A Host Who Cares", "Enjoy the confidence of staying with an experienced Airbnb Superhost committed to excellent guest experiences."],
+    ["pin", "Convenient Florida Locations", "Discover welcoming homes close to beaches, parks, shopping, dining, and local attractions."],
+    ["coffee", "Comforts of Home", "Enjoy fully equipped kitchens, Wi-Fi, laundry facilities, and welcoming spaces designed for everyday living."]
+  ];
+  return html`<section className="py-24 md:py-32">
+    <div className="max-w-7xl mx-auto px-5 lg:px-8">
+      <${SectionHead} eyebrow="Why Stay With Us" title="The Little Things, Taken Care Of" />
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        ${items.map(([i, t, d], n) => html`<${Reveal} key=${t} delay=${n * 90} className="lift rounded-3xl p-8 bg-gradient-to-b from-white to-sand/30 border border-sand">
+          <span className="w-12 h-12 rounded-2xl bg-sage/25 text-sage-dark flex items-center justify-center"><${Icon} name=${i} className="w-6 h-6" /></span>
+          <h3 className="mt-6 font-serif text-2xl leading-snug">${t}</h3>
+          <p className="mt-3 text-navy/70 leading-relaxed text-[15px]">${d}</p>
+        <//>`)}
+      </div>
+    </div>
+  </section>`;
+}
+
+function About() {
+  return html`<section id="about" className="py-24 md:py-32 bg-navy text-white scroll-mt-20 relative overflow-hidden">
+    <div className="absolute -right-32 -top-32 w-96 h-96 rounded-full bg-sage/10"></div>
+    <div className="relative max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-5 gap-14 items-center">
+      <${Reveal} className="lg:col-span-2">
+        <div className="relative max-w-sm mx-auto">
+          <${Photo} k="host" pos="object-[50%_35%]" alt="Ginny Adkins, Realtor, designer and Airbnb Superhost, smiling with a coffee mug" label="Host photo · Ginny Adkins" tone="garden" className="aspect-[4/5] w-full shadow-2xl" rounded="rounded-[2rem]" />
+          <div className="absolute -bottom-6 -right-4 sm:-right-8 bg-ivory text-navy rounded-2xl px-5 py-4 shadow-xl flex items-center gap-3">
+            <span className="w-10 h-10 rounded-full bg-gold/25 text-gold-dark flex items-center justify-center"><${Icon} name="award" className="w-5 h-5" /></span>
+            <span><span className="block font-serif text-lg leading-none">Airbnb Superhost</span><span className="text-xs text-navy/60">Realtor · Designer</span></span>
+          </div>
+        </div>
+      <//>
+      <${Reveal} delay=${120} className="lg:col-span-3">
+        <p className="text-xs uppercase eyebrow text-gold font-medium mb-3">About Your Host</p>
+        <h2 className="font-serif text-4xl md:text-5xl">Meet Your Host, Ginny</h2>
+        <div className="mt-6 space-y-5 text-lg text-white/85 leading-relaxed">
+          <p>Hi, I'm Ginny! As a Realtor, designer, and Airbnb Superhost, I believe that where you stay should feel just as special as the memories you create along the way.</p>
+          <p>I take pride in offering thoughtfully furnished homes that combine comfort, style, and practical amenities. Whether you're visiting Florida for a vacation, a work assignment, or an extended stay, my goal is to help make your experience easy, relaxing, and memorable.</p>
+          <p className="font-serif italic text-2xl text-gold">I look forward to welcoming you!</p>
+        </div>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <${AirbnbBtn} href=${CONFIG.airbnb.sunseeker} variant="gold">Sunseeker on Airbnb<//>
+          <${AirbnbBtn} href=${CONFIG.airbnb.serenity} variant="light">Serenity Sprout on Airbnb<//>
+          ${CONFIG.social.youtube ? html`<${ExtLink} href=${CONFIG.social.youtube} className="inline-flex items-center gap-2 rounded-full border border-white/60 text-white hover:bg-white hover:text-navy px-6 py-3 font-medium transition-colors"><${Icon} name="youtube" className="w-5 h-5" />Watch Ginny on YouTube<//>` : null}
+          ${CONFIG.airbnb.hostProfile ? html`<${AirbnbBtn} href=${CONFIG.airbnb.hostProfile} variant="light">Ginny's host profile<//>` : null}
+          ${CONFIG.realEstateUrl ? html`<${ExtLink} href=${CONFIG.realEstateUrl} className="inline-flex items-center gap-2 px-2 py-3 text-white/80 hover:text-white underline underline-offset-4">Ginny's real estate website<${Icon} name="external" className="w-4 h-4" /><//>` : null}
+        </div>
+      <//>
+    </div>
+  </section>`;
+}
+
+function Reviews({ filter }) {
+  const list = REVIEWS.filter(r => !filter || r.property === filter);
+  const propsShown = filter ? PROPS.filter(p => p.id === filter) : PROPS;
+  return html`<section id="reviews" className="py-24 md:py-32 scroll-mt-20">
+    <div className="max-w-7xl mx-auto px-5 lg:px-8">
+      <${SectionHead} eyebrow="Guest Reviews" title="What Our Guests Say" sub="Airbnb reviews come only from guests who completed a stay, so you can read real experiences before you book." />
+      ${list.length ? html`<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        ${list.map((r, i) => html`<${Reveal} key=${i} delay=${i * 80} as="figure" className="bg-white rounded-3xl p-8 shadow-[0_10px_40px_-24px_rgba(36,55,70,.3)] flex flex-col">
+          <${Stars} n=${r.rating} />
+          <blockquote className="mt-5 font-serif text-xl leading-relaxed text-navy flex-1">“${r.text}”</blockquote>
+          <figcaption className="mt-6 text-sm text-navy/65"><span className="font-medium text-navy">${r.name}</span>${r.date ? ` · ${r.date}` : ""} · ${PROPS.find(p => p.id === r.property)?.name || ""}</figcaption>
+        <//>`)}
+      </div>` : CONFIG.showPlaceholders ? html`<${Reveal} className="grid md:grid-cols-3 gap-6" >
+        ${[0, 1, 2].map(i => html`<div key=${i} className="rounded-3xl border-2 border-dashed border-sand p-8 text-center bg-white/50">
+          <div className="flex justify-center"><${Stars} n=${5} /></div>
+          <p className="mt-4 font-serif text-xl text-navy/60">Guest review placeholder</p>
+          <p className="mt-2 text-sm text-navy/50">An approved Airbnb review (guest first name, rating, excerpt and property) will appear here.</p>
+        </div>`)}
+      <//>` : null}
+      <${Reveal} className="mt-12 flex flex-col sm:flex-row gap-3 justify-center">
+        ${propsShown.map(p => html`<${AirbnbBtn} key=${p.id} href=${p.url} variant=${p.id === "sunseeker" ? "navy" : "outline"}>Read More Guest Reviews on Airbnb${propsShown.length > 1 ? ` · ${p.navName}` : ""}<//>`)}
+      <//>
+    </div>
+  </section>`;
+}
+
+function MapCard({ kind }) {
+  // Illustrative, approximate-area artwork (not a street map; no property address shown).
+  const coast = kind === "coast";
+  return html`<div className=${`relative h-56 rounded-2xl overflow-hidden ${coast ? "bg-[#e9efe9]" : "bg-[#eef1ea]"}`} role="img" aria-label=${`Illustrated map of the ${coast ? "South Daytona" : "Deltona"} area (approximate location)`}>
+    <svg viewBox="0 0 400 220" className="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      ${coast ? html`<g>
+        <path d="M300 0 C285 60 315 120 295 220 L400 220 L400 0Z" fill="#9fb8c8" opacity=".75"/>
+        <path d="M255 0 C245 70 268 140 252 220" stroke="#b9cdd8" strokeWidth="10" fill="none"/>
+        <path d="M0 150 C80 140 160 165 250 150" stroke="#fff" strokeWidth="5" fill="none"/>
+        <path d="M120 0 L135 220" stroke="#fff" strokeWidth="5" fill="none"/>
+        <path d="M0 70 C90 80 180 60 250 75" stroke="#fff" strokeWidth="3" fill="none"/>
+        <text x="335" y="110" fontSize="12" fill="#243746" opacity=".6" fontFamily="Inter">Atlantic</text>
+      </g>` : html`<g>
+        <ellipse cx="90" cy="70" rx="45" ry="26" fill="#a9c2c9" opacity=".8"/>
+        <ellipse cx="300" cy="150" rx="55" ry="30" fill="#a9c2c9" opacity=".8"/>
+        <ellipse cx="250" cy="45" rx="25" ry="15" fill="#a9c2c9" opacity=".7"/>
+        <path d="M0 120 C120 110 260 130 400 105" stroke="#fff" strokeWidth="6" fill="none"/>
+        <path d="M180 0 L200 220" stroke="#fff" strokeWidth="4" fill="none"/>
+        <circle cx="60" cy="170" r="16" fill="#9CAF9B" opacity=".5"/><circle cx="350" cy="60" r="14" fill="#9CAF9B" opacity=".5"/>
+      </g>`}
+      <circle cx="190" cy="110" r="46" fill=${coast ? "#C4A77D" : "#6F8A6E"} opacity=".18"/>
+      <circle cx="190" cy="110" r="22" fill=${coast ? "#C4A77D" : "#6F8A6E"} opacity=".25"/>
+    </svg>
+    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-full text-navy"><${Icon} name="pin" className="w-8 h-8 drop-shadow" /></div>
+    <span className="absolute bottom-3 left-3 text-[11px] bg-white/90 rounded-full px-3 py-1 text-navy/70">Approximate area · ${coast ? "South Daytona, FL" : "Deltona, FL"}</span>
+  </div>`;
+}
+
+function Neighborhood() {
+  const areas = [
+    { kind: "coast", title: "South Daytona: Beach Days & Entertainment", p: PROPERTIES["sunseeker-getaway"],
+      text: "Stay about six minutes from Daytona Beach, with Daytona International Speedway, Reed Canal Park, local restaurants and shopping, and Daytona Beach events all within easy reach.",
+      points: [["sun", "Daytona Beach"], ["flag", "Daytona International Speedway"], ["trees", "Parks, incl. Reed Canal Park"], ["utensils", "Restaurants & local attractions"]] },
+    { kind: "lake", title: "Deltona: Peaceful Living & Convenience", p: PROPERTIES["serenity-sprout"],
+      text: "Enjoy a quieter pace near Dupont Lakes Park, Harris M. Saxon Park and Angela Lake, with nearby hospitals, everyday conveniences and convenient highway access across Central Florida.",
+      points: [["trees", "Parks: Dupont Lakes & Harris M. Saxon"], ["waves", "Angela Lake"], ["cross", "Nearby hospitals"], ["road", "Convenient highway access"]] }
+  ];
+  return html`<section id="neighborhood" className="py-24 md:py-32 bg-sand/35 scroll-mt-20">
+    <div className="max-w-7xl mx-auto px-5 lg:px-8">
+      <${SectionHead} eyebrow="Explore the Neighborhood" title="Two Florida Locations, Two Different Paces" />
+      <div className="grid lg:grid-cols-2 gap-8">
+        ${areas.map((a, i) => html`<${Reveal} key=${a.kind} delay=${i * 120} className="bg-white rounded-3xl p-6 md:p-8 shadow-[0_10px_40px_-24px_rgba(36,55,70,.3)]">
+          <${MapCard} kind=${a.kind} />
+          <h3 className="mt-7 font-serif text-3xl">${a.title}</h3>
+          <p className="mt-3 text-navy/70 leading-relaxed">${a.text}</p>
+          <ul className="mt-5 grid sm:grid-cols-2 gap-3">
+            ${a.points.map(([ic, t]) => html`<li key=${t} className="flex items-center gap-2.5 text-sm"><span className="w-8 h-8 rounded-full bg-sage/20 text-sage-dark flex items-center justify-center shrink-0"><${Icon} name=${ic} className="w-4 h-4" /></span>${t}</li>`)}
+          </ul>
+          <div className="mt-7"><${ExtLink} href=${`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a.p.mapQuery)}`} className="inline-flex items-center gap-2 rounded-full border border-navy/20 px-5 py-2.5 text-sm font-medium hover:bg-navy hover:text-white transition-colors">
+            <${Icon} name="pin" className="w-4 h-4" /> View ${a.p.area} on Google Maps<//></div>
+        <//>`)}
+      </div>
+    </div>
+  </section>`;
+}
+
+const FAQS = [
+  ["How do I book a property?", "Both homes are booked through their official Airbnb listings. Choose Book on Airbnb for Sunseeker Getaway or Serenity Sprout Retreat to see real-time pricing and availability and to book securely. This website does not take bookings or payments."],
+  ["Are pets allowed?", "Yes. Sunseeker Getaway is pet-friendly with prior approval and applicable fees. Serenity Sprout Retreat is pet-friendly with applicable fees. Please review each listing on Airbnb for current pet details."],
+  ["Are the homes fully furnished?", "Yes. Both homes are fully furnished, with fully equipped kitchens, laundry, Wi-Fi and dedicated workspaces, so you can settle in comfortably."],
+  ["Is Wi-Fi available?", "Yes. Sunseeker Getaway has high-speed Wi-Fi and Serenity Sprout Retreat has Wi-Fi. Both homes also have a dedicated workspace."],
+  ["Is parking included?", "Yes. Sunseeker Getaway offers free parking, including space for a trailer. Serenity Sprout Retreat offers free on-site parking."],
+  ["Do you offer extended stays?", "Serenity Sprout Retreat is designed for extended stays and is suitable for month-to-month accommodations, a great fit for remote workers and traveling professionals. Check the Airbnb listing for available dates and long-stay terms, or send an inquiry with your dates."],
+  ["How do I contact the host?", `You can message Ginny through Airbnb from either listing, email her at ${CONFIG.email}, or call ${CONFIG.phone}.`],
+  ["Where can I find cancellation policies?", "Cancellation policies are set on each Airbnb listing and are shown before you confirm your booking. Please review the policy on the listing for your dates."],
+  ["Are there additional guest verification requirements?", "Airbnb may ask guests to verify their identity before booking. Any additional requirements for a specific home are listed in that property's house rules on Airbnb."]
+];
+function FAQ() {
+  const [open, setOpen] = useState(0);
+  return html`<section id="faq" className="py-24 md:py-32 scroll-mt-20">
+    <div className="max-w-3xl mx-auto px-5 lg:px-8">
+      <${SectionHead} eyebrow="FAQ" title="Frequently Asked Questions" />
+      <${Reveal} className="divide-y divide-navy/10 border-y border-navy/10">
+        ${FAQS.map(([q, a], i) => html`<div key=${q}>
+          <h3><button className="w-full flex items-center justify-between gap-6 py-6 text-left" aria-expanded=${open === i} aria-controls=${`faq-${i}`} id=${`faq-q-${i}`} onClick=${() => setOpen(open === i ? -1 : i)}>
+            <span className="font-serif text-xl md:text-2xl">${q}</span>
+            <span className=${`shrink-0 w-9 h-9 rounded-full border border-navy/15 flex items-center justify-center transition-transform duration-300 ${open === i ? "rotate-180 bg-navy text-white border-navy" : ""}`}><${Icon} name="down" className="w-4 h-4" /></span>
+          </button></h3>
+          <div id=${`faq-${i}`} role="region" aria-labelledby=${`faq-q-${i}`} className=${`acc-body ${open === i ? "open" : ""}`}><div><p className="pb-6 pr-12 text-navy/70 leading-relaxed">${a}</p></div></div>
+        </div>`)}
+      <//>
+    </div>
+  </section>`;
+}
+
+function Booking() {
+  return html`<section id="book" className="py-24 md:py-32 bg-navy scroll-mt-20">
+    <div className="max-w-7xl mx-auto px-5 lg:px-8">
+      <${SectionHead} light=${true} eyebrow="Book Your Stay" title="Ready for Your Florida Getaway?" sub="Whether you're dreaming of beachside adventures or a peaceful home away from home, your perfect stay is just a few clicks away." />
+      <div className="grid md:grid-cols-2 gap-8">
+        ${PROPS.map((p, i) => html`<${Reveal} key=${p.id} delay=${i * 120} className="lift rounded-3xl overflow-hidden bg-navy-light/40 border border-white/10">
+          <div className="zoom"><${Photo} k=${p.gallery[i === 0 ? 3 : 0][0]} alt=${`${p.name}, ${p.location}`} label=${p.name} tone=${p.tone} rounded="rounded-none" className="h-64 w-full" /></div>
+          <div className="p-8 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+            <div><h3 className="font-serif text-3xl text-white">${p.name}</h3><p className="mt-1 text-white/70 flex items-center gap-1.5"><${Icon} name="pin" className="w-4 h-4" />${p.location}</p></div>
+            <${AirbnbBtn} href=${p.url} variant="gold">Book on Airbnb<//>
+          </div>
+        <//>`)}
+      </div>
+      <p className="mt-10 text-center text-sm text-white/60">Pricing, availability and secure booking are handled on Airbnb. Links open in a new tab.</p>
+    </div>
+  </section>`;
+}
+
+function Field({ label, id, children, hint }) {
+  return html`<div><label htmlFor=${id} className="block text-sm font-medium text-navy mb-1.5">${label}</label>${children}${hint ? html`<p className="mt-1 text-xs text-navy/50">${hint}</p>` : null}</div>`;
+}
+const inputCls = "w-full rounded-xl border border-navy/15 bg-white px-4 py-3 text-navy placeholder:text-navy/35 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/30 transition";
+
+function Contact({ defaultProperty = "" }) {
+  const [f, setF] = useState({ name: "", email: "", property: defaultProperty, checkin: "", checkout: "", guests: "", message: "" });
+  const [status, setStatus] = useState({ kind: "idle", msg: "" });
+  const [copied, setCopied] = useState(false);
+  const set = (k) => (e) => setF({ ...f, [k]: e.target.value });
+  const summary = () => `Inquiry for Ginny Adkins | Florida Getaways
+Name: ${f.name}
+Email: ${f.email}
+Property: ${f.property || "Not sure yet"}
+Dates: ${f.checkin || "?"} to ${f.checkout || "?"}
+Guests: ${f.guests || "?"}
+
+${f.message}`;
+  const submit = async (e) => {
+    e.preventDefault();
+    if (!f.name.trim() || !/^\S+@\S+\.\S+$/.test(f.email) || !f.message.trim()) {
+      setStatus({ kind: "error", msg: "Please add your name, a valid email address and a message." }); return;
+    }
+    if (f.checkin && f.checkout && f.checkout <= f.checkin) {
+      setStatus({ kind: "error", msg: "Your check-out date needs to be after your check-in date." }); return;
+    }
+    if (!CONFIG.formEndpoint) {
+      setStatus({ kind: "notconnected", msg: "" }); return;
+    }
+    setStatus({ kind: "sending", msg: "" });
+    try {
+      const res = await fetch(CONFIG.formEndpoint, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(f) });
+      if (!res.ok) throw new Error(String(res.status));
+      setStatus({ kind: "sent", msg: "" });
+      setF({ name: "", email: "", property: defaultProperty, checkin: "", checkout: "", guests: "", message: "" });
+    } catch (err) {
+      setStatus({ kind: "error", msg: "Sorry, your inquiry couldn't be sent. Please try again, or message Ginny through Airbnb." });
+    }
+  };
+  const copy = async () => {
+    try { await navigator.clipboard.writeText(summary()); setCopied(true); setTimeout(() => setCopied(false), 2500); } catch (e) { setCopied(false); }
+  };
+  return html`<section id="contact" className="py-24 md:py-32 bg-sand/35 scroll-mt-20">
+    <div className="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-5 gap-12">
+      <div className="lg:col-span-2">
+        <${SectionHead} center=${false} eyebrow="Contact" title="Have Questions About Your Stay?" sub="Planning a getaway or looking for a comfortable extended stay? We'd love to help you find the right place." />
+        <ul className="space-y-4 text-navy/80">
+          <li className="flex items-center gap-3"><span className="w-10 h-10 rounded-full bg-white flex items-center justify-center"><${Icon} name="mail" className="w-4 h-4" /></span>
+            ${CONFIG.email ? html`<a className="hover:text-navy underline-offset-4 hover:underline" href=${`mailto:${CONFIG.email}`}>${CONFIG.email}</a>` : html`<span className="text-navy/50">[Business email to be added]</span>`}</li>
+          <li className="flex items-center gap-3"><span className="w-10 h-10 rounded-full bg-white flex items-center justify-center"><${Icon} name="phone" className="w-4 h-4" /></span>
+            ${CONFIG.phone ? html`<a className="hover:text-navy underline-offset-4 hover:underline" href=${`tel:${CONFIG.phone.replace(/[^\d+]/g, "")}`}>${CONFIG.phone}</a>` : html`<span className="text-navy/50">[Phone number to be added]</span>`}</li>
+          ${CONFIG.social.youtube ? html`<li className="flex items-center gap-3"><span className="w-10 h-10 rounded-full bg-white flex items-center justify-center"><${Icon} name="youtube" className="w-4 h-4" /></span><${ExtLink} href=${CONFIG.social.youtube} className="hover:text-navy hover:underline underline-offset-4">Ginny on YouTube<//></li>` : null}
+          <li className="flex items-center gap-3"><span className="w-10 h-10 rounded-full bg-white flex items-center justify-center"><${Icon} name="key" className="w-4 h-4" /></span>
+            <span>Prefer Airbnb? Message Ginny from the <${ExtLink} href=${CONFIG.airbnb.sunseeker} className="underline underline-offset-4">Sunseeker<//> or <${ExtLink} href=${CONFIG.airbnb.serenity} className="underline underline-offset-4">Serenity Sprout<//> listing.</span></li>
+        </ul>
+      </div>
+      <${Reveal} className="lg:col-span-3">
+        <form onSubmit=${submit} noValidate className="bg-white rounded-3xl p-7 md:p-10 shadow-[0_10px_40px_-24px_rgba(36,55,70,.3)] grid sm:grid-cols-2 gap-5" aria-describedby="form-status">
+          <${Field} label="Full Name" id="f-name"><input id="f-name" className=${inputCls} autoComplete="name" required value=${f.name} onChange=${set("name")} placeholder="Your full name" /><//>
+          <${Field} label="Email Address" id="f-email"><input id="f-email" type="email" className=${inputCls} autoComplete="email" required value=${f.email} onChange=${set("email")} placeholder="you@example.com" /><//>
+          <div className="sm:col-span-2"><${Field} label="Property of Interest" id="f-prop">
+            <select id="f-prop" className=${inputCls} value=${f.property} onChange=${set("property")}>
+              <option value="">Not sure yet</option>
+              <option>Sunseeker Getaway (South Daytona)</option>
+              <option>Serenity Sprout Retreat (Deltona)</option>
+            </select><//></div>
+          <${Field} label="Check-in Date" id="f-in"><input id="f-in" type="date" className=${inputCls} value=${f.checkin} onChange=${set("checkin")} /><//>
+          <${Field} label="Check-out Date" id="f-out"><input id="f-out" type="date" className=${inputCls} value=${f.checkout} min=${f.checkin || undefined} onChange=${set("checkout")} /><//>
+          <div className="sm:col-span-2"><${Field} label="Number of Guests" id="f-guests"><input id="f-guests" type="number" min="1" max="12" className=${inputCls} value=${f.guests} onChange=${set("guests")} placeholder="e.g. 4" /><//></div>
+          <div className="sm:col-span-2"><${Field} label="Message" id="f-msg"><textarea id="f-msg" rows="5" required className=${inputCls} value=${f.message} onChange=${set("message")} placeholder="Tell us about your trip, questions, or extended-stay needs"></textarea><//></div>
+          <div className="sm:col-span-2 flex flex-col sm:flex-row sm:items-center gap-4">
+            <button type="submit" disabled=${status.kind === "sending"} className="inline-flex items-center justify-center gap-2 rounded-full bg-navy text-white hover:bg-navy-light disabled:opacity-60 px-8 py-3.5 font-medium transition-colors">
+              ${status.kind === "sending" ? "Sending…" : "Send Inquiry"}<${Icon} name="arrow" className="w-4 h-4" /></button>
+            <p className="text-xs text-navy/50">For bookings, pricing and availability, please use Airbnb.</p>
+          </div>
+          <div id="form-status" aria-live="polite" className="sm:col-span-2">
+            ${status.kind === "error" ? html`<p className="rounded-xl bg-red-50 text-red-800 px-4 py-3 text-sm">${status.msg}</p>` : null}
+            ${status.kind === "sent" ? html`<p className="rounded-xl bg-sage/20 text-navy px-4 py-3 text-sm flex items-center gap-2"><${Icon} name="check" className="w-4 h-4" />Thank you! Your inquiry has been sent. Ginny will be in touch soon.</p>` : null}
+            ${status.kind === "notconnected" ? html`<div className="rounded-xl bg-sand/60 text-navy px-5 py-4 text-sm space-y-3">
+              <p className="flex gap-2"><${Icon} name="info" className="w-4 h-4 shrink-0 mt-0.5" /><span><strong>Your message has not been sent.</strong> Online inquiries aren't connected yet. Please email Ginny at ${CONFIG.email}, call ${CONFIG.phone}, or message her through Airbnb. You can copy your message below and paste it there.</span></p>
+              <div className="flex flex-wrap gap-2">
+                <button type="button" onClick=${copy} className="inline-flex items-center gap-2 rounded-full bg-white border border-navy/15 px-4 py-2 text-sm hover:border-navy"><${Icon} name="copy" className="w-4 h-4" />${copied ? "Copied!" : "Copy my message"}</button>
+                <${AirbnbBtn} href=${CONFIG.airbnb.sunseeker} variant="outline" className="!py-2 !px-4 text-sm">Sunseeker on Airbnb<//>
+                <${AirbnbBtn} href=${CONFIG.airbnb.serenity} variant="outline" className="!py-2 !px-4 text-sm">Serenity Sprout on Airbnb<//>
+              </div>
+            </div>` : null}
+          </div>
+        </form>
+      <//>
+    </div>
+  </section>`;
+}
+
+function Footer({ go }) {
+  const social = [["youtube", CONFIG.social.youtube, "YouTube"], ["instagram", CONFIG.social.instagram, "Instagram"], ["facebook", CONFIG.social.facebook, "Facebook"]].filter(([, url]) => url);
+  const [privacy, setPrivacy] = useState(false);
+  return html`<footer className="bg-[#1B2A36] text-white/75">
+    <div className="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div>
+        <p className="font-serif text-2xl text-white">Ginny Adkins <span className="text-gold">|</span> Florida Getaways</p>
+        <p className="mt-4 text-sm leading-relaxed">${CONFIG.tagline} Thoughtfully designed, personally hosted vacation homes in South Daytona and Deltona, Florida.</p>
+        <div className="mt-5 flex gap-3">
+          ${social.map(([ic, url, lbl]) => url
+            ? html`<${ExtLink} key=${ic} href=${url} label=${lbl} className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-navy transition-colors"><${Icon} name=${ic} className="w-4 h-4" /><//>`
+            : html`<span key=${ic} title=${`${lbl} link to be added`} className="w-10 h-10 rounded-full border border-dashed border-white/20 flex items-center justify-center opacity-50"><${Icon} name=${ic} className="w-4 h-4" /><span className="sr-only">${lbl} link to be added</span></span>`)}
+        </div>
+      </div>
+      <nav aria-label="Footer">
+        <p className="text-xs uppercase eyebrow text-gold mb-4">Explore</p>
+        <ul className="space-y-2.5 text-sm">
+          ${[["Home", () => go("home", "top")], ["Our Properties", () => go("home", "properties")], ["About Your Host", () => go("home", "about")], ["Guest Reviews", () => go("home", "reviews")], ["FAQ", () => go("home", "faq")], ["Contact", () => go("home", "contact")]].map(([l, fn]) => html`<li key=${l}><button onClick=${fn} className="hover:text-white">${l}</button></li>`)}
+        </ul>
+      </nav>
+      <div>
+        <p className="text-xs uppercase eyebrow text-gold mb-4">Properties</p>
+        <ul className="space-y-2.5 text-sm">
+          ${PROPS.map(p => html`<li key=${p.id}><button onClick=${() => go(p.slug)} className="hover:text-white">${p.name}</button> <span className="text-white/40">· ${p.area}</span></li>`)}
+          ${PROPS.map(p => html`<li key=${p.id + "a"}><${ExtLink} href=${p.url} className="hover:text-white inline-flex items-center gap-1.5">${p.navName} on Airbnb <${Icon} name="external" className="w-3.5 h-3.5" /><//></li>`)}
+        </ul>
+      </div>
+      <div>
+        <p className="text-xs uppercase eyebrow text-gold mb-4">Contact</p>
+        <ul className="space-y-2.5 text-sm">
+          <li>${CONFIG.email ? html`<a href=${`mailto:${CONFIG.email}`} className="hover:text-white">${CONFIG.email}</a>` : "[Business email to be added]"}</li>
+          <li>${CONFIG.phone ? html`<a href=${`tel:${CONFIG.phone.replace(/[^\d+]/g, "")}`} className="hover:text-white">${CONFIG.phone}</a>` : "[Phone number to be added]"}</li>
+          <li>Messages also welcome through Airbnb</li>
+        </ul>
+      </div>
+    </div>
+    <div className="border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-col md:flex-row gap-3 justify-between text-xs text-white/55">
+        <p>Copyright © 2026 Ginny Adkins | Florida Getaways. All rights reserved.</p>
+        <p>Property availability, rates, and booking terms are managed through Airbnb and may change.</p>
+        <button onClick=${() => setPrivacy(true)} className="hover:text-white underline underline-offset-4 text-left">Privacy Policy</button>
+      </div>
+    </div>
+    ${privacy ? html`<${PrivacyModal} onClose=${() => setPrivacy(false)} />` : null}
+  </footer>`;
+}
+
+function PrivacyModal({ onClose }) {
+  const ref = useRef(null);
+  useEffect(() => {
+    ref.current && ref.current.focus();
+    const k = (e) => e.key === "Escape" && onClose();
+    document.addEventListener("keydown", k); document.body.style.overflow = "hidden";
+    return () => { document.removeEventListener("keydown", k); document.body.style.overflow = ""; };
+  }, [onClose]);
+  return html`<div className="fixed inset-0 z-[100] bg-[#121c24]/70 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="pp-title" onClick=${(e) => e.target === e.currentTarget && onClose()}>
+    <div className="bg-ivory text-navy rounded-3xl max-w-xl w-full p-8 max-h-[85vh] overflow-y-auto">
+      <div className="flex justify-between items-start gap-4"><h2 id="pp-title" className="font-serif text-3xl">Privacy Policy</h2>
+        <button ref=${ref} onClick=${onClose} className="p-2 rounded-full hover:bg-navy/5" aria-label="Close privacy policy"><${Icon} name="x" className="w-5 h-5" /></button></div>
+      <div className="mt-4 space-y-3 text-sm text-navy/75 leading-relaxed">
+        <p>This website showcases our vacation rental homes. We do not take bookings or payments here; all reservations are made on Airbnb and are subject to Airbnb's own terms and privacy policy.</p>
+        <p>If you send an inquiry, we use the details you provide (name, email, dates, guest count and message) only to respond to you. We do not sell your information.</p>
+        <p>Links to Airbnb and Google Maps open those third-party sites, which have their own privacy practices.</p>
+        <p className="text-navy/50 italic">Placeholder policy. Please have the owner review and finalize it before launch.</p>
+      </div>
+    </div>
+  </div>`;
+}
+
+/* ---------- Property detail page ---------- */
+function PropertyPage({ p, go }) {
+  useEffect(() => { setMeta(p.seoTitle, p.seoDesc); }, [p]);
+  const other = PROPS.find(x => x.id !== p.id);
+  return html`<div>
+    <section className="pt-28 md:pt-32 pb-10">
+      <div className="max-w-7xl mx-auto px-5 lg:px-8">
+        <nav aria-label="Breadcrumb" className="text-sm text-navy/60 mb-6">
+          <button onClick=${() => go("home", "top")} className="hover:text-navy">Home</button><span className="mx-2">/</span>
+          <button onClick=${() => go("home", "properties")} className="hover:text-navy">Our Properties</button><span className="mx-2">/</span>
+          <span className="text-navy" aria-current="page">${p.name}</span>
+        </nav>
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
+          <div>
+            <p className="text-xs uppercase eyebrow text-sage-dark font-medium flex items-center gap-1.5"><${Icon} name="pin" className="w-3.5 h-3.5" />${p.location}</p>
+            <h1 className="mt-3 font-serif text-5xl md:text-6xl">${p.name}</h1>
+            <p className="mt-3 font-serif italic text-2xl text-gold-dark">${p.headline}</p>
+          </div>
+          <${AirbnbBtn} href=${p.url} variant="navy" className="self-start lg:self-auto" />
+        </div>
+        <${Gallery} items=${p.gallery} tone=${p.tone} />
+      </div>
+    </section>
+
+    <section className="pb-20">
+      <div className="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-3 gap-12">
+        <div className="lg:col-span-2 space-y-16">
+          <${Reveal}>
+            <ul className="flex flex-wrap gap-3 mb-8">
+              ${p.stats.map(([i, t]) => html`<li key=${t} className="flex items-center gap-2 rounded-full bg-white border border-sand px-4 py-2 text-sm"><${Icon} name=${i} className="w-4 h-4 text-sage-dark" />${t}</li>`)}
+            </ul>
+            <h2 className="font-serif text-3xl md:text-4xl">About this home</h2>
+            <p className="mt-4 text-lg text-navy/75 leading-relaxed">${p.overview}</p>
+            ${p.overview2 ? html`<p className="mt-4 text-lg text-navy/75 leading-relaxed">${p.overview2}</p>` : null}
+            <ul className="mt-6 flex flex-wrap gap-2">${p.badges.map(b => html`<li key=${b} className="text-xs rounded-full bg-sand/60 px-3 py-1.5">${b}</li>`)}</ul>
+          <//>
+
+          <${Reveal}>
+            <h2 className="font-serif text-3xl md:text-4xl">${p.id === "serenity" ? "Bedrooms & Living Spaces" : "Sleeping Arrangements"}</h2>
+            <p className="mt-3 text-navy/70">${p.sleeping.intro}</p>
+            <div className=${`mt-6 grid gap-4 ${p.sleeping.rooms.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
+              ${p.sleeping.rooms.map(([t, k]) => html`<div key=${t} className="bg-white rounded-2xl overflow-hidden border border-sand">
+                <${Photo} k=${k} alt=${`${t} at ${p.name}`} label=${t} tone=${p.tone} rounded="rounded-none" className="h-40 w-full" />
+                <p className="p-4 flex items-center gap-2 font-medium text-sm"><${Icon} name="bed" className="w-4 h-4 text-sage-dark" />${t}</p>
+              </div>`)}
+              ${p.id === "serenity" ? html`<div className="bg-white rounded-2xl overflow-hidden border border-sand sm:col-span-2 grid sm:grid-cols-2">
+                <${Photo} k="serenity-living" alt="Living room at Serenity Sprout Retreat" label="Living room" tone=${p.tone} rounded="rounded-none" className="h-40 w-full" />
+                <${Photo} k="serenity-kitchen" alt="Fully equipped kitchen at Serenity Sprout Retreat" label="Kitchen" tone=${p.tone} rounded="rounded-none" className="h-40 w-full" />
+              </div>` : null}
+            </div>
+            <p className="mt-3 text-sm text-navy/55">${p.sleeping.note}</p>
+          <//>
+
+          <${Reveal}>
+            <h2 className="font-serif text-3xl md:text-4xl">${p.id === "serenity" ? "Home Amenities" : "Amenities"}</h2>
+            <ul className="mt-6 grid sm:grid-cols-2 gap-x-8 gap-y-4">
+              ${p.amenities.map(([i, t]) => html`<li key=${t} className="flex items-center gap-3"><span className="w-10 h-10 rounded-xl bg-sage/20 text-sage-dark flex items-center justify-center shrink-0"><${Icon} name=${i} className="w-5 h-5" /></span><span>${t}</span></li>`)}
+            </ul>
+          <//>
+
+          ${p.workspace ? html`<${Reveal}>
+            <h2 className="font-serif text-3xl md:text-4xl">Workspace Highlights</h2>
+            <div className="mt-6 grid md:grid-cols-5 gap-6 items-stretch">
+              <${Photo} k="serenity-workspace" alt="Dedicated workspace at Serenity Sprout Retreat" label="Dedicated workspace" tone=${p.tone} className="md:col-span-2 h-56 md:h-auto" />
+              <ul className="md:col-span-3 space-y-4">
+                ${p.workspace.map(([i, t, d]) => html`<li key=${t} className="flex gap-4 bg-white rounded-2xl p-5 border border-sand"><span className="w-10 h-10 rounded-xl bg-gold/20 text-gold-dark flex items-center justify-center shrink-0"><${Icon} name=${i} className="w-5 h-5" /></span><span><span className="block font-medium">${t}</span><span className="text-sm text-navy/65">${d}</span></span></li>`)}
+              </ul>
+            </div>
+          <//>` : null}
+
+          <${Reveal}>
+            <h2 className="font-serif text-3xl md:text-4xl">${p.id === "serenity" ? "Outdoor Living" : "Outdoor Entertainment"}</h2>
+            <div className=${`mt-6 grid gap-5 sm:grid-cols-2 ${p.outdoor.length === 3 ? "lg:grid-cols-3" : ""}`}>
+              ${p.outdoor.map(([i, t, d, k]) => html`<div key=${t} className="lift bg-white rounded-2xl overflow-hidden border border-sand">
+                <div className="zoom"><${Photo} k=${k} alt=${`${t} at ${p.name}`} label=${t} tone=${p.tone} rounded="rounded-none" className="h-44 w-full" /></div>
+                <div className="p-5"><p className="flex items-center gap-2 font-serif text-xl"><${Icon} name=${i} className="w-5 h-5 text-gold-dark" />${t}</p><p className="mt-1.5 text-sm text-navy/65">${d}</p></div>
+              </div>`)}
+            </div>
+          <//>
+
+          ${p.extended ? html`<${Reveal}>
+            <h2 className="font-serif text-3xl md:text-4xl">Extended-Stay Benefits</h2>
+            <p className="mt-3 text-navy/70">Settling in for a work assignment, a relocation or a longer Florida visit? Serenity Sprout is set up for everyday living.</p>
+            <ul className="mt-6 grid sm:grid-cols-2 gap-4">
+              ${p.extended.map(([i, t, d]) => html`<li key=${t} className="flex gap-4 rounded-2xl p-5 bg-gradient-to-b from-white to-sand/30 border border-sand"><span className="w-10 h-10 rounded-xl bg-sage/20 text-sage-dark flex items-center justify-center shrink-0"><${Icon} name=${i} className="w-5 h-5" /></span><span><span className="block font-medium">${t}</span><span className="text-sm text-navy/65">${d}</span></span></li>`)}
+            </ul>
+          <//>` : null}
+
+          <${Reveal}>
+            <h2 className="font-serif text-3xl md:text-4xl">Nearby Attractions</h2>
+            <div className="mt-6 grid md:grid-cols-2 gap-6">
+              <${MapCard} kind=${p.tone === "coast" ? "coast" : "lake"} />
+              <ul className="space-y-3">
+                ${p.nearby.map(([i, t, d]) => html`<li key=${t} className="flex items-center gap-3"><span className="w-9 h-9 rounded-full bg-sand/70 flex items-center justify-center shrink-0"><${Icon} name=${i} className="w-4 h-4" /></span><span><span className="block font-medium text-sm">${t}</span><span className="text-xs text-navy/55">${d}</span></span></li>`)}
+              </ul>
+            </div>
+            <div className="mt-5"><${ExtLink} href=${`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.mapQuery)}`} className="inline-flex items-center gap-2 rounded-full border border-navy/20 px-5 py-2.5 text-sm font-medium hover:bg-navy hover:text-white transition-colors"><${Icon} name="pin" className="w-4 h-4" />View ${p.area} on Google Maps<//></div>
+          <//>
+
+          <${Reveal}>
+            <h2 className="font-serif text-3xl md:text-4xl">Important House Rules</h2>
+            <ul className="mt-6 space-y-3">
+              ${p.rules.map(r => html`<li key=${r} className="flex gap-3"><${Icon} name="check" className="w-5 h-5 text-sage-dark shrink-0 mt-0.5" /><span className="text-navy/80">${r}</span></li>`)}
+            </ul>
+          <//>
+        </div>
+
+        <aside className="lg:col-span-1">
+          <div className="lg:sticky lg:top-28 bg-white rounded-3xl p-7 shadow-[0_10px_40px_-20px_rgba(36,55,70,.3)] border border-sand">
+            <p className="text-xs uppercase eyebrow text-sage-dark font-medium">Book your stay</p>
+            <h2 className="mt-2 font-serif text-3xl">${p.name}</h2>
+            <p className="mt-1 text-sm text-navy/60">${p.location}</p>
+            <ul className="mt-5 space-y-2 text-sm">${p.stats.map(([i, t]) => html`<li key=${t} className="flex items-center gap-2"><${Icon} name=${i} className="w-4 h-4 text-sage-dark" />${t}</li>`)}</ul>
+            <${AirbnbBtn} href=${p.url} variant="gold" className="w-full mt-7" />
+            <p className="mt-4 text-xs text-navy/55 leading-relaxed">Real-time pricing, availability and secure checkout are on Airbnb. Rates and terms may change.</p>
+            <div className="mt-6 pt-6 border-t border-sand flex items-center gap-3">
+              <span className="w-10 h-10 rounded-full bg-gold/20 text-gold-dark flex items-center justify-center"><${Icon} name="award" className="w-5 h-5" /></span>
+              <span className="text-sm"><span className="block font-medium">Hosted by Ginny Adkins</span><span className="text-navy/60">Airbnb Superhost</span></span>
+            </div>
+            <button onClick=${() => go("home", "contact")} className="mt-5 w-full rounded-full border border-navy/20 py-3 text-sm font-medium hover:border-navy">Ask Ginny a question</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <${Reviews} filter=${p.id} />
+
+    <section className="py-20 bg-navy">
+      <div className="max-w-7xl mx-auto px-5 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div><p className="text-xs uppercase eyebrow text-gold mb-2">Ready when you are</p><h2 className="font-serif text-4xl text-white">Book ${p.name} on Airbnb</h2></div>
+        <div className="flex flex-wrap gap-3">
+          <${AirbnbBtn} href=${p.url} variant="gold">Book on Airbnb<//>
+          <button onClick=${() => go(other.slug)} className="inline-flex items-center gap-2 rounded-full border border-white/50 text-white hover:bg-white hover:text-navy px-6 py-3 font-medium transition-colors">See ${other.navName}<${Icon} name="arrow" className="w-4 h-4" /></button>
+        </div>
+      </div>
+    </section>
+  </div>`;
+}
+
+/* ---------- App ---------- */
+function Home({ go }) {
+  useEffect(() => { setMeta("Ginny Adkins | Florida Getaways — South Daytona & Deltona Vacation Rentals",
+    "Florida vacation rentals hosted by Airbnb Superhost Ginny Adkins: a South Daytona home with hot tub near Daytona Beach, and a Deltona furnished rental for extended stays. Pet-friendly. Book on Airbnb."); }, []);
+  return html`<div>
+    <${Hero} go=${go} />
+    <${Welcome} />
+    <${Properties} go=${go} />
+    <${WhyStay} />
+    <${About} />
+    <${Reviews} />
+    <${Neighborhood} />
+    <${FAQ} />
+    <${Booking} />
+    <${Contact} />
+  </div>`;
+}
+
+function App() {
+  const [route, setRoute] = useState(readRoute());
+  const pending = useRef(null);
+  useEffect(() => {
+    const on = () => { setRoute(readRoute()); };
+    window.addEventListener("hashchange", on);
+    return () => window.removeEventListener("hashchange", on);
+  }, []);
+  // after a route render, scroll to pending section or top
+  useEffect(() => {
+    const target = pending.current; pending.current = null;
+    requestAnimationFrame(() => {
+      if (target && target !== "top") { const el = document.getElementById(target); if (el) { el.scrollIntoView({ behavior: "smooth" }); return; } }
+      window.scrollTo({ top: 0, behavior: target === "top" ? "smooth" : "auto" });
+    });
+  }, [route]);
+  const go = useCallback((r, section) => {
+    if (r === route) {
+      if (section && section !== "top") { const el = document.getElementById(section); if (el) { el.scrollIntoView({ behavior: "smooth" }); return; } }
+      window.scrollTo({ top: 0, behavior: "smooth" }); return;
+    }
+    pending.current = section || null;
+    const newHash = r === "home" ? "home" : r;
+    if (location.hash.replace("#", "") === newHash) setRoute(r); else location.hash = newHash;
+    setRoute(r);
+  }, [route]);
+  const p = PROPERTIES[route];
+  return html`<div>
+    <${Nav} route=${route} go=${go} />
+    <main id="main" tabIndex="-1" className="outline-none">
+      ${p ? html`<${PropertyPage} key=${route} p=${p} go=${go} />` : html`<${Home} go=${go} />`}
+    </main>
+    ${p ? html`<${Contact} defaultProperty=${p.id === "sunseeker" ? "Sunseeker Getaway (South Daytona)" : "Serenity Sprout Retreat (Deltona)"} key=${"c" + route} />` : null}
+    <${Footer} go=${go} />
+  </div>`;
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(html`<${App} />`);
+</script>
+</body>
+</html>
