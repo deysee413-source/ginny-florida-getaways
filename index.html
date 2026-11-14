@@ -103,7 +103,14 @@ function photoSrc(k) { return PHOTOS[k] || (/^s[sp]-\d+$/.test(k) ? `img/${k}.jp
 /* Genuine guest reviews only, copied from Airbnb with permission.
    Example shape (do not publish made-up reviews):
    { name: "First name", rating: 5, text: "Review excerpt…", property: "sunseeker", date: "Month YYYY" } */
-const REVIEWS = [];
+const REVIEWS = [
+  {"name": "Jenny", "rating": 5, "property": "sunseeker", "date": "June 2026", "text": "What an absolutely amazing home and host! This was my first time using AB&B and first time in Daytona and Ginny and her home knocked it out of the park. We felt right at home, everyone had their own space, and the amenities gave us a a chance to relax and have time as a family after busy days of beach-going and sightseeing. Ginny herself was very responsive and easy to communicate with during the stay. The location was perfect, close to everything, and very peaceful. I would love to stay there again!"},
+  {"name": "Kalee", "rating": 5, "property": "sunseeker", "date": "April 2026", "text": "We really enjoyed our stay! The place had beachy, Florida charm. It was very clean, updated, and had everything we needed - plenty of bath towels, beach towels, kitchen items, etc. The backyard was so cute and private! The tiki bar, fire pit, and hot tub were excellent additions. I usually don’t go in hot tubs, but this one was very clean and so nice. I highly recommend booking!"},
+  {"name": "Andrew", "rating": 5, "property": "sunseeker", "date": "May 2026", "text": "Clean, cozy home with a spacious fenced-in private backyard and a nice Florida room. Grocery stores are conveniently close — about 10 minutes away or less — and it’s approximately 15 minutes from the speedway. Ginny was very responsive, usually replying within 30 minutes and never taking more than an hour. She was also friendly and accommodating with check-in and check-out. We chose this Airbnb because it’s pet friendly. The bedrooms do have rugs. I would stay here again!"},
+  {"name": "Constantin", "rating": 5, "property": "serenity", "date": "December 2025", "text": "Clean, comfortable home with a lovely sunny patio where we enjoyed our breakfasts. Very convenient location near supermarkets, Lowe’s, and Burger King. We stayed for five days and would absolutely stay there again if available."},
+  {"name": "Morgan", "rating": 5, "property": "serenity", "date": "December 2025", "text": "Great stay that had everything we needed for ourselves and our dogs!"},
+  {"name": "Zachary", "rating": 5, "property": "serenity", "date": "May 2026", "text": "Had a great stay and will probably stay again. Host was responsive and addressed my questions immediately."}
+];
 
 /* ===================================================================== */
 
