@@ -94,7 +94,7 @@ const PHOTOS = {
   "sunseeker-bed-2": "img/ss-14.jpg", "sunseeker-bed-3": "img/ss-15.jpg", "sunseeker-bath": "img/ss-25.jpg", "sunseeker-hot-tub": "img/ss-35.jpg",
   "sunseeker-fire-pit": "img/ss-33.jpg", "sunseeker-tiki-bar": "img/ss-38.jpg", "sunseeker-game-garage": "img/ss-47.jpg", "sunseeker-patio": "img/ss-42.jpg",
   "serenity-exterior": "img/sp-37.jpg", "serenity-living": "img/sp-02.jpg", "serenity-kitchen": "img/sp-06.jpg", "serenity-bed-1": "img/sp-18.jpg",
-  "serenity-bed-2": "", "serenity-workspace": "img/sp-17.jpg", "serenity-bath": "", "serenity-laundry": "img/sp-35.jpg",
+  "serenity-bed-2": "img/sp-22.jpg", "serenity-workspace": "img/sp-17.jpg", "serenity-bath": "", "serenity-laundry": "img/sp-35.jpg",
   "serenity-backyard": "img/sp-31.jpg", "serenity-patio": "img/sp-32.jpg", "serenity-grill": "img/sp-30.jpg"
 };
 /* Listing photos are stored as img/ss-NN.jpg (Sunseeker) and img/sp-NN.jpg (Serenity). */
@@ -216,11 +216,11 @@ const PROPERTIES = {
       "Check-in and check-out times, quiet hours and the complete house rules are listed on Airbnb and confirmed before you book."
     ],
     gallery: [
-      ["ss-37", "Fire pit and backyard at dusk"], ["ss-02", "Bright, coastal living room"], ["ss-06", "Kitchen with island seating"],
+      ["ss-01", "Living room"], ["ss-37", "Fire pit and backyard at dusk"], ["ss-02", "Bright, coastal living room"], ["ss-06", "Kitchen with island seating"],
       ["ss-32", "Private hot tub under the string lights"], ["ss-19", "Primary bedroom with king bed"], ["ss-35", "Six-person private hot tub"],
       ["ss-33", "Fire pit seating"], ["ss-38", "Backyard tiki bar"], ["ss-41", "String-lit backyard with cornhole"],
       ["ss-36", "Fully fenced backyard"], ["ss-42", "Screened patio lounge"], ["ss-43", "Screened patio seating"],
-      ["ss-45", "Front porch"], ["ss-01", "Living room"], ["ss-03", "Living room with Roku TV"],
+      ["ss-45", "Front porch"], ["ss-03", "Living room with Roku TV"],
       ["ss-05", "Pet-friendly home (with approval)"], ["ss-07", "Kitchen and coffee station"], ["ss-09", "Kitchen and dining area"],
       ["ss-11", "Dining table for the whole group"], ["ss-14", "Bedroom 2 with queen bed"], ["ss-13", "Bedroom 2"],
       ["ss-15", "Bedroom 3 with full and twin beds"], ["ss-17", "Dedicated workspace desk"], ["ss-21", "Primary bedroom"],
@@ -283,8 +283,8 @@ const PROPERTIES = {
       "Check-in and check-out times and the complete house rules are listed on Airbnb and confirmed before you book."
     ],
     gallery: [
-      ["sp-37", "Front of Serenity Sprout Retreat"], ["sp-02", "Living and dining area"], ["sp-06", "Fully equipped kitchen"],
-      ["sp-33", "Private covered patio"], ["sp-18", "Bedroom with queen bed"], ["sp-17", "Dedicated workspace"],
+      ["sp-02", "Living and dining area"], ["sp-37", "Front of Serenity Sprout Retreat"], ["sp-06", "Fully equipped kitchen"],
+      ["sp-33", "Private covered patio"], ["sp-18", "Bedroom 1 with queen bed"], ["sp-22", "Bedroom 2 with queen bed"], ["sp-25", "Bedroom 2"], ["sp-17", "Dedicated workspace"],
       ["sp-07", "Kitchen"], ["sp-08", "Kitchen and entry"], ["sp-10", "Stove, range hood and sink"],
       ["sp-11", "Dishes and glassware"], ["sp-12", "Cookware"], ["sp-15", "Dining area"],
       ["sp-43", "Coffee station"], ["sp-32", "Covered patio seating"], ["sp-34", "Patio with gas grill"],
@@ -543,7 +543,7 @@ function Welcome() {
 function PropertyCard({ p, go, delay }) {
   return html`<${Reveal} delay=${delay} as="article" className="lift bg-white rounded-3xl overflow-hidden shadow-[0_10px_40px_-20px_rgba(28,69,96,.25)] flex flex-col">
     <button onClick=${() => go(p.slug)} className="zoom block relative" aria-label=${`${p.cta}`}>
-      <${Photo} k=${p.gallery[0][0]} alt=${`${p.name} in ${p.location}`} label=${`${p.name} · exterior`} tone=${p.tone} rounded="rounded-none" className="h-72 md:h-80 w-full" />
+      <${Photo} k=${p.gallery[0][0]} alt=${`${p.name} in ${p.location}`} label=${`${p.name} · living room`} tone=${p.tone} rounded="rounded-none" className="h-72 md:h-80 w-full" />
       <span className="absolute top-4 left-4 inline-flex items-center gap-1.5 bg-white/95 text-navy text-xs font-medium rounded-full px-3 py-1.5"><${Icon} name="pin" className="w-3.5 h-3.5" />${p.location}</span>
     </button>
     <div className="p-7 md:p-9 flex flex-col flex-1">
